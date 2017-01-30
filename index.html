@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Lista de Tareas</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h3>AGENDA DE TÁREAS</h3>
+    </div>
+</header>
+<section>
+   <div class="container">
+    <div class="principal">
+		<div class="caja">
+			<form class="formulario" action="">
+				<input type="text" id="tareaInput" placeholder="Agrega tu tarea">
+				<input type="button" class="boton" id="btn-agregar" value="Agregar Tarea">
+			</form>
+		</div>
+	</div>
+	<div class="tareas">
+		<div class="row col-md-8 col-xs-16 col-md-push-2" >
+			<ul class="lista" id="lista">
+				<li><a href="#"><input class="che" name="lis" type="checkbox" /> Hacer mi trabajo de ciencias hasta  la 1 pm.</a></li>
+				<li><a href="#"><input class="che" name="lis" type="checkbox" /> Presentacion de trabajo final a las 3 pm.</a></li>
+				<li><a href="#"><input class="che" name="lis" type="checkbox" />Reunirme con mi grupo de marketing</a></li>	
+			</ul>
+		</div>
+	</div>
+   </div>
+</section>
+	<script src="js/main.js"></script>
+</body>
+</html>
