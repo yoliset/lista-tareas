@@ -57,6 +57,12 @@ body {
 	border:2px solid #e2b1b1;
    background-color: rgba(169, 98, 67, 0.63);
 }
+input[type=checkbox] {
+    outline: 5px auto;
+    outline-offset: -2px;
+    position: relative;
+    color: black;
+}
  
 /* - Tareas - */
 .tareas .lista {
@@ -88,4 +94,6 @@ body {
 .tareas .lista li a:hover {
 	text-decoration: line-through;
     color: red;
+    position: relative;
+    left: 10px;
 }
