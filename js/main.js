@@ -10,6 +10,7 @@
 			nuevaTarea = document.createElement("li"),
 			enlace = document.createElement("a"),
             input=document.createElement('input')
+            icono = document.createElement("span");
 			contenido = document.createTextNode(tarea);
  
 		if (tarea === "") {
@@ -25,23 +26,30 @@
         input.setAttribute('Type', 'checkbox');
 		// Le establecemos un atributo href
 		enlace.setAttribute("href", "#");
+        // Agrergamos el icono de borrar con un span
+        icono.className = "glyphicon  glyphicon-trash , icon , pull-right";
 		// Agrergamos el enlace (a) a la nueva tarea (li)
         nuevaTarea.appendChild(input);
 		nuevaTarea.appendChild(enlace);
+        nuevaTarea.appendChild(enlace);
+        nuevaTarea.appendChild(icono);
         
 		// Agregamos la nueva tarea a la lista
 		lista.appendChild(nuevaTarea);
  
 		tareaInput.value = "";
- 
-		for (var i = 0; i <= lista.children.length -1; i++) {
-			lista.children[i].addEventListener("click", function(){
-				this.parentNode.removeChild(this);
-			});
+ // para eliminar los elementos con mi icono
+    var eliminar = document.getElementsByClassName("icon");
+        for (var c = 0; c < eliminar.length; c++) {
+         eliminar[c].onclick = function(){
+          var lista = this.parentElement;
+          lista.style.display = "none";
+  			this.parentNode.removeChild(this);
+			}
 		}
  
 	};
-   
+    
 	var comprobarInput = function(){
 		tareaInput.className = "";
 		tareaInput.setAttribute("placeholder", "Agrega tu tarea");
@@ -58,9 +66,5 @@
  
 	// Comprobar Input
 	tareaInput.addEventListener("click", comprobarInput);
- 
-	// Borrando Elementos de la lista
-	for (var i = 0; i <= lista.children.length -1; i++) {
-		lista.children[i].addEventListener("click", eleminarTarea);
-	}
+ 	
 }());
