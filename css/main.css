@@ -65,7 +65,14 @@ input[type=checkbox] {
      position: relative;
      left: -6px;
 }
- 
+.caja1
+{
+     font-size: 16px;
+     text-align: center;
+     font-weight:bolder;
+     padding: 10px;
+     background : url(../img/flores.gif) center center;
+}
 /* - Tareas - */
 .tareas .lista {
 	 list-style: none;
